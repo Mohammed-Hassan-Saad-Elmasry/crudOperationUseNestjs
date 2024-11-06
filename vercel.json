@@ -22,8 +22,9 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "commands": {
-      "build": "tsc"
-    }
+    "commands": [
+      "npm install",
+      "npm run build"
+    ]
   }
 }
