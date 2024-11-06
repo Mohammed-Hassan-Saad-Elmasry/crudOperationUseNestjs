@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 
 @Injectable()
-export class ValidatiompipePipe implements PipeTransform {
+export class ValidationPipe  implements PipeTransform {
   constructor(private schema: object) {}
   transform(value: any, metadata: ArgumentMetadata) {
     if (this.schema[metadata.type]) {
