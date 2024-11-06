@@ -9,7 +9,9 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     AuthModel,
-    MongooseModule.forRoot('mongodb://localhost/crudOperationUseNestJs'),
+    MongooseModule.forRoot(
+      'mongodb+srv://elmasry:ol320BYG7TwqWT3g@cluster0.knzr2ur.mongodb.net/CrudOperationUseNestJs?retryWrites=true&w=majority&appName=Cluster0',
+    ),
     UserModule,
     ProductModule,
     ConfigModule.forRoot({
