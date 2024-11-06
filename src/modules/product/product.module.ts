@@ -6,6 +6,7 @@ import { ProductRegister } from '../schema/product.schema';
 import { ServiceDB } from '../auth/auth.Db.Service';
 import { userRegister } from '../schema/user.model';
 import { JwtService } from '@nestjs/jwt';
+import { CanActivate } from 'src/guard/guard.guard';
 @Module({
   imports: [ProductRegister, userRegister],
   controllers: [ProductController],
@@ -13,7 +14,8 @@ import { JwtService } from '@nestjs/jwt';
     ProductService,
     ProductServiceDB,
     ServiceDB,
-    JwtService
+    JwtService,
+    CanActivate,
   ],
 })
 export class ProductModule {}
