@@ -16,6 +16,7 @@ import { CanActivate } from 'src/guard/guard.guard';
     ServiceDB,
     JwtService,
     CanActivate,
+    
   ],
 })
 export class ProductModule {}
