@@ -1,5 +1,5 @@
 # crudOperationUseNestjs
-NestOnlineApp
+
 تطبيق NestOnlineApp هو نظام CRUD لإدارة المنتجات باستخدام NestJS، مع ميزات المصادقة، وترخيص المستخدمين، ورفع الصور عبر Cloudinary.
 
 المتطلبات الأساسية
