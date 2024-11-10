@@ -9,7 +9,7 @@ export class UserService {
     return req.user; // إرجاع بيانات المستخدم
   }
 
-  async profileImage(file: Express.Multer.File, req: any): Promise<any> {
+  async profileImage(file: Express.Multer.File, req: any): Promise<object> {
     try {
       const user = req.user;
       if (!user) {
