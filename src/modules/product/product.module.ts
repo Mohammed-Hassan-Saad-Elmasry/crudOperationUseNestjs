@@ -7,6 +7,7 @@ import { ServiceDB } from '../auth/auth.Db.Service';
 import { userRegister } from '../schema/user.model';
 import { JwtService } from '@nestjs/jwt';
 import { CanActivate } from 'src/guard/guard.guard';
+import { CloudinaryService } from 'src/utils/cloudinary';
 @Module({
   imports: [ProductRegister, userRegister],
   controllers: [ProductController],
@@ -16,7 +17,7 @@ import { CanActivate } from 'src/guard/guard.guard';
     ServiceDB,
     JwtService,
     CanActivate,
-    
+    CloudinaryService,
   ],
 })
 export class ProductModule {}

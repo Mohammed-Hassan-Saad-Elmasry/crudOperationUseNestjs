@@ -6,7 +6,7 @@ import { ValidationPipe } from 'src/pipe/validatiompipe/validatiompipe.pipe';
 @Controller('auth')
 export class AuthController {
   constructor(private _AuthService: AuthService) {}
-   @UsePipes(new ValidationPipe(validators.singup))
+  @UsePipes(new ValidationPipe(validators.singup))
   @Post('signup')
   async signup(@Body() body: signupDTO) {
     return await this._AuthService.signup(body);
@@ -14,6 +14,6 @@ export class AuthController {
 
   @Post('login')
   async Login(@Body() body: LoginDTO) {
-    return await this._AuthService.Login(body);
+    return await this._AuthService.login(body);
   }
 }

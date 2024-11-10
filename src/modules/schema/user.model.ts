@@ -1,5 +1,8 @@
 import { MongooseModule, Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-
+type Image = {
+  public_id: string;
+  secure_url: string;
+};
 @Schema({ timestamps: true })
 export class User {
   @Prop({ required: true, lowercase: true })
@@ -10,6 +13,9 @@ export class User {
   password: string;
   @Prop({ default: 'User', enum: ['User', 'Admin'], required: true })
   role: string;
+
+  @Prop({ type: Object, default: {} })
+  image: Image;
 }
 
 export const userSchema = SchemaFactory.createForClass(User);

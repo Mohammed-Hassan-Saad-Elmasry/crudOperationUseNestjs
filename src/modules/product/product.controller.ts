@@ -1,3 +1,4 @@
+import { CloudinaryService } from './../../utils/cloudinary';
 import { ProductService } from './product.service';
 import {
   Body,
@@ -16,7 +17,10 @@ import { Roles } from 'src/roles/roles.decorator';
 import { log } from 'console';
 @Controller('product')
 export class ProductController {
-  constructor(private _ProductService: ProductService) {}
+  constructor(
+    private _ProductService: ProductService,
+    private _CloudinaryService: CloudinaryService,
+  ) {}
   @Post()
   @Roles(['Admin'])
   @UseGuards(CanActivate)
